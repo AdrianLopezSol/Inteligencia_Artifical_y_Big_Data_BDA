@@ -1,0 +1,44 @@
+erDiagram
+    ALUMNOS {
+        int NIA PK
+        string Nombre
+        string Curso
+        string Grupo
+    }
+
+    CALIFICACIONES {
+        int ID PK
+        int NIA FK
+        int CodigoCurso FK
+        int CodigoModulo FK
+        float Nota
+    }
+
+    CURSOS {
+        int Codigo PK
+        string Nombre
+    }
+
+    GRUPOS {
+        int Codigo PK
+        string Nombre
+    }
+
+    HORAS {
+        int ID PK
+        int CodigoModulo FK
+        int Horas
+    }
+
+    MODULOS {
+        int Codigo PK
+        string Nombre
+    }
+
+    %% Relaciones
+    ALUMNOS ||--o{ CALIFICACIONES : tiene
+    CURSOS ||--o{ CALIFICACIONES : contiene
+    MODULOS ||--o{ CALIFICACIONES : corresponde_a
+    MODULOS ||--o{ HORAS : tiene
+    CURSOS ||--o{ ALUMNOS : tiene
+    GRUPOS ||--o{ ALUMNOS : contiene
