@@ -38,3 +38,7 @@ Es una de las habilidades más importantes de un profesional del dato.
 5. **Documentar los hallazgos**  
    - Apunta tus observaciones en un **documento de texto**.  
    - Este documento será el **punto de partida** para la limpieza de datos en módulos posteriores.
+
+4.1 - ¿Cuál es el **separador de columnas**?  
+
+Para todos los archivos excepto el `Indicadores_Finales.csv` el separador es (`,`) para el archivo de `Indicadores_Finales.csv` el separador es (`;`)
