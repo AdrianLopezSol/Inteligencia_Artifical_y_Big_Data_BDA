@@ -1,0 +1,43 @@
+{
+  "id": "SensorAgua:001",
+  "type": "SensorCalidadAgua",
+  "ph": {
+    "value": 7.2,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "pH" }
+    }
+  },
+  "chlorine": {
+    "value": 0.5,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "mg/L" }
+    }
+  },
+  "temperatura": {
+    "value": 18.4,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "°C" }
+    }
+  },
+  "turbidez": {
+    "value": 2.1,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "NTU" }
+    }
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [-3.7038, 40.4168]
+    }
+  },
+  "fechaHora": {
+    "value": "2025-10-19T10:45:00Z",
+    "type": "DateTime"
+  }
+}

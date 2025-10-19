@@ -1,0 +1,22 @@
+{
+  "id": "SensorCO2:001",
+  "type": "SensorCO2",
+  "co2": {
+    "value": 415.7,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "ppm" }
+    }
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [-3.7038, 40.4168]
+    }
+  },
+  "fechaHora": {
+    "value": "2025-10-19T10:45:00Z",
+    "type": "DateTime"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "SensorTemperatura:001",
+  "type": "SensorTemperatura",
+  "temperatura": {
+    "value": 23.5,
+    "type": "Float",
+    "metadata": {
+      "unidad": { "value": "°C" }
+    }
+  },
+  "location": {
+    "type": "geo:json",
+    "value": {
+      "type": "Point",
+      "coordinates": [-3.7038, 40.4168]
+    }
+  },
+  "fechaHora": {
+    "value": "2025-10-19T10:45:00Z",
+    "type": "DateTime"
+  }
+}
