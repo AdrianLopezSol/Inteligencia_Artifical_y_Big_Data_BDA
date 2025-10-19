@@ -1,0 +1,31 @@
+erDiagram
+    LINEAS {
+        int Linea PK
+        string Nombre
+        string Descripcion
+    }
+
+    OBJETIVOS {
+        string Objetivo_PAA PK
+        string Descripcion
+        int Linea FK
+    }
+
+    INDICADORES_FINALES {
+        string Identificador PK
+        string Cod_PAA FK
+        string Cod_SQ FK
+        string Descripcion
+        float Valor
+    }
+
+    PROCESOS {
+        string Proceso PK
+        string sNombre
+        string Descripcion
+    }
+
+    %% Relaciones
+    LINEAS ||--o{ OBJETIVOS : contiene
+    OBJETIVOS ||--o{ INDICADORES_FINALES : tiene
+    PROCESOS ||--o{ INDICADORES_FINALES : genera
