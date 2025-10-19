@@ -1,8 +1,12 @@
 # Análisis Académico - Tarea 1: La Primera Inspección
 
+
 **4.1 - ¿Cuál es el separador de columnas?**  
 
 Para todos los archivos excepto el `Indicadores_Finales.csv` el separador es (`,`) para el archivo de `Indicadores_Finales.csv` el separador es (`;`)
+
+---
+
 
 **4.2 - ¿La primera fila contiene los nombres de las columnas (encabezados) y son claros y descriptivos?** 
 
@@ -11,6 +15,8 @@ En todos los archivos la primera linea contiene el nombre de las columnas.
 La gran parte de los encabezados son claros pero hay algunos ficheros con algunas columnas que pueden ser mas confusas, estos son:
 
   En `Indicadores_Finales.csv` los campos **Valor-A**, **Valor-T1**, **Valor-T2**, **Valor-T3**, **Cod_SQ** y **Cod_PAA** son confusos y poco comprensibles. El resto de archivos parecen tener encabezados descriptivos y funcionales.
+
+  ---
 
 **4.3 - Inspecciona visualmente las primeras 20-30 filas. ¿Ves valores que te parezcan extraños o que faltan (celdas vacías, "N/A", "s/d")?**
 
@@ -21,10 +27,14 @@ La gran parte de los encabezados son claros pero hay algunos ficheros con alguna
   -En `Indicadores_Finales.csv` los campos de **Valor-T1**, **Valor-T2** y **Valor-T3** tienen la gran mayoria de los registros vacios.
 
   -Existen valores como **fecha_exportacion** parecen tener siempre el mismo valor pero podria ser simplemente porque no tenemos todos los registros por lo que no parece un problema.
+
+  ---
   
 **4.4 - ¿Los formatos son consistentes? Por ejemplo, ¿las fechas están siempre como DD/MM/AAAA o a veces cambian?**
 
   Los formatos parecen ser consistentes, las fechas utilizan el formato DD/MM/AAAA y las horas HH:MM:SS. No he encontrado ningún otro formato que parezca ser inconsistente.
+
+  ---
 
 **4.5 - Identifica las "claves" o "IDs" que podrían servir para relacionar unos ficheros con otros (ej: id_alumno en el fichero de calificaciones.csv y también en alumnos.csv ).**
 
