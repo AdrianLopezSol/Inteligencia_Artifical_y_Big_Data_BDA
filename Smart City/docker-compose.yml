@@ -1,0 +1,49 @@
+version: "3.7"
+services:
+  mongo:
+    image: mongo:8.0
+    networks:
+      - fiware-net
+  orion:
+    image: telefonicaiot/fiware-orion
+    ports:
+       - "1026:1026"
+    depends_on:
+       - mongo
+    command: -dbURI mongodb://mongo
+    networks:
+      - fiware-net
+
+  cratedb:
+    image: crate:5.2.2
+    container_name: fiware_cratedb
+    ports:
+      - "4200:4200"   # HTTP
+      - "5432:5432"   # Postgres protocol (if needed)
+    volumes:
+      - crate_data:/var/lib/crate
+    networks:
+      - fiware-net
+
+  quantumleap:
+    image: fiware/quantum-leap:1.0.0
+    container_name: fiware_quantumleap
+    depends_on:
+      - cratedb
+      - orion
+    ports:
+      - "8668:8668"
+    environment:
+      - CRATE_HOST=cratedb
+      - CRATE_PORT=4200
+      - TZ=Europe/Madrid
+    networks:
+      - fiware-net
+
+volumes:
+  mongo_data:
+  crate_data:
+
+networks:
+  fiware-net:
+    driver: bridge

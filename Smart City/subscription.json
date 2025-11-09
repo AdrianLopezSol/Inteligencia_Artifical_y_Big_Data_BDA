@@ -1,0 +1,37 @@
+{
+  "description": "Send all updates from SensorAgua, SensorCO2, and SensorTemperatura to QuantumLeap",
+  "subject": {
+    "entities": [
+      { "idPattern": "SensorAgua:.*", "type": "SensorCalidadAgua" },
+      { "idPattern": "SensorCO2:.*", "type": "SensorCO2" },
+      { "idPattern": "SensorTemperatura:.*", "type": "SensorTemperatura" }
+    ],
+    "condition": {
+      "attrs": [
+        "ph",
+        "chlorine",
+        "temperatura",
+        "turbidez",
+        "co2",
+        "fechaHora",
+        "location"
+      ]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://quantumleap:8668/v2/notify"
+    },
+    "attrs": [
+      "ph",
+      "chlorine",
+      "temperatura",
+      "turbidez",
+      "co2",
+      "fechaHora",
+      "location"
+    ],
+    "metadata": ["dateCreated", "dateModified"]
+  },
+  "throttling": 0
+}
